@@ -1,0 +1,16 @@
+set key value -> value is string here,  set can overwrite value of an existing key
+get key
+del key 
+
+setex key seconds value -> key gets expired/deleted after seconds time
+psetex key miliseconds value -> sets value for miliseconds
+set key value [xx|nx] ex seconds -> key gets expired/deleted after seconds time
+setnx key value -> creates a key only if it doesnot exists  
+mset key1 value1 key2 value2 -> set multiple key value at once, for same repeated last value is set
+
+strlen key -> length of value
+
+incr/decr key -> value get incremented or decremented by 1 if can be casted to integer
+incrby/decrby key value -> value get incremented or decremented the key by 'value' mentioned if can be casted to integer
+
+append key value -> appends value of key with value mentioned
