@@ -1,0 +1,16 @@
+hset key field1 value1 field2 value2...
+hsetnx key field value -> add field value if field is not present
+hdel key field -> delete a field present in the key
+
+hkeys key -> all fields present in key
+hvals key -> all values of fields present in key
+
+hget key field -> get value of field for the key
+hmget key field1 field2 -> get values of the fields in key
+hgetall key -> gives all fields and values of that key
+
+hexists key field -> check if field is present in key
+
+hincrby/decrby key  field value -> increment/decrement field of key by value
+
+hlen key -> number of field-value pairs in the key
