@@ -1,5 +1,5 @@
+sudo service redis-server start -> starts redis server
+
 key * -> shows all the keys present
 flushall -> deletes all keys
 clear -> clears the terminal
-setex key seconds value -> key gets expired/deleted after seconds time
-set key value [xx|nx] ex seconds -> key gets expired/deleted after seconds time
