@@ -1,0 +1,18 @@
+lists of strings sorted by their insertion order
+
+head->value1->value2->value..n->tail
+
+lpush key value -> pushes value in list from head/left
+lpushx key value -> pushes value in list from head/left only if key exists
+lrange key startIndex stopIndex -> prints values in the given range
+lrange key 0 -1 -> prints all values in the list
+lpop -> pops value from head/left 
+
+rpush key value -> pushes value in list from tail/right
+rpop -> pops value from tail/right 
+
+llen key -> number of elements in the list
+lindex key indexNo -> element at indexNo in list
+
+lset key index value -> insert value in list at index
+linsert key before|after value anothervalue ->insert anothervalue bef or after value in list
