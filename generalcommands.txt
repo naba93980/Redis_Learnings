@@ -1,4 +1,8 @@
 sudo service redis-server start -> starts redis server
+sudo service redis-server stop -> stops redis server
+
+redis-cli -> starts redis cli 
+redis-cli monitor -> monitors all the commands in redis-cli
 
 key * -> shows all the keys present
 flushall -> deletes all keys
