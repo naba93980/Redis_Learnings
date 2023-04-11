@@ -1,0 +1,19 @@
+set -> pair of key and unique values
+
+sadd setKeyName value1 value2 value3 -> adds value in set
+scard setKeyName -> gives number of all values in set
+smembers setKeyName -> gives all values of in set
+smove sourceSetKeyName1 destinationSetKeyName2 value -> move value from source set to destination set
+
+sdiff setKeyName1 - setKeyName2 -> returns values of setKeyName1 not present in setKeyName2
+sdiffstore newSet setKeyName1 setKeyName2 -> new set containing values of setKeyName1 not present in setKeyName2
+
+sunion setKeyName1 setKeyName2 -> return values of union of both the sets
+sunionstore newSet setKeyName1 setKeyName2 -> new set containing union of both sets
+
+sinter setKeyName1 setKeyName2 -> prints intersection of both the sets
+sinterstore newSet setKeyName1 setKeyName2 -> new set containing intersection of both the sets
+
+srem setKeyName value -> removes value from set
+spop setKeyName n -> removes n random values from setKeyName and prints them
+
