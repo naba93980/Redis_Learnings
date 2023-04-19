@@ -1,0 +1,14 @@
+publisher clients publish to every node     
+subcriber clients can subscribe to any channel by connecting to any one of the nodes.                                           
+                                                                       
+PUBSUB CHANNELS -> Returns the active channels.
+PUBSUB NUMSUB CHANNEL1 CHANNEL2  -> Returns a count of subscribers to channels.
+
+pub: 
+publish channelname message
+
+sub :
+subscribe channelname
+unsubscribe [channel [channelname...]]
+psubscribe pattern [channelname pattern]
+punsubscribe [pattern [channelname pattern...]]
