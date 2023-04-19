@@ -1,0 +1,16 @@
+a set which gets sorted based on the score associated with each value
+
+
+zadd key score1 value 1 score2 value2 -> add values with its score in the key 
+zrange key startindex stopndex [byscore] [rev] [limit offsetvalue countvalue] [withscores] -> prints the values of key in index range, orders byscore sorts value by score(small to large), rev reverses by score(large to small), 
+zcard key -> print number of values in key
+zcount key minscore maxscore-> print number of values in given min max range of score
+zrem key value -> delete the value from the key 
+zrank key value -> gives index of the value in the key from front
+zrevrank key value -> gives index of the value in the key from back
+zscore key value -> gives score of the value in key
+zcount key minscore maxscore -> Returns the count of members in a sorted set that have scores within a range.
+zrangebyscore key minscore maxscore -> Returns members in a sorted set within a range of scores.
+
+
+
