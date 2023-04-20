@@ -10,8 +10,27 @@ means redis streams keeps entries ordered as a time series
 
 each entry in stream is lot more like redis hash, entries are schemaless
 
-xadd key * field1 value1 field2 value2 -> add new data as set of name value pair in key stream
-xrange key starttime endtime [count n] -> show all data entry in between the given time range, count n t limit the number of rentires returned
+stream :-
+
+xadd key maxlen n * field1 value1 field2 value2 -> add new data as set of name value pair in key stream, if entries exceeds maxlen then oldest entries are removed
+xrange key startid endid [count n] -> show all data entry in between the given time range, count n t limit the number of rentires returned
 xrange key - + count n -> minus -> lowest time, plus -> highest time
-xrevrange key latesttime oldesttime
-xrevrange key + - count n -> minus -> lowest time, plus -> highest time
+xrevrange key latestid oldestid
+xrevrange key + - count n -> minus -> lowest id, plus -> highest id
+xread count n block miliseconds stream key starttimeid -> read data from one or multiple streams, in asynchronous manner only returning entries with an ID greater than the last received ID reported by the caller.
+xtrim key maxlen n -> trims n oldest entries from the streams
+xlen key -> length of streams
+
+consumer:
+
+xgroup create key groupname id -> id is the last delivered entry in the stream from the new group's perspective
+xgroup createconsumer key groupname consumername
+xinfo groups key
+xinfo consumers key group
+xreadgroup group groupname consumername streams key id
+xpending key groupname
+xack key groupname id 
+
+
+
+https://youtu.be/Z8qcpXyMAiA
