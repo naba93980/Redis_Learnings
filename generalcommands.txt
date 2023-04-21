@@ -7,3 +7,4 @@ redis-cli monitor -> monitors all the commands in redis-cli
 key * -> shows all the keys present
 flushall -> deletes all keys
 clear -> clears the terminal
+type key -> shows key is of what type
